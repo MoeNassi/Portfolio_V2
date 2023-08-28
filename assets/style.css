@@ -1,0 +1,152 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: black;
+	color: white;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: 5rem 15rem;
+}
+.first {
+	text-transform: capitalize;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 6%;
+}
+.first h2 {
+	font-style: italic;
+	font-weight: 800;
+}
+.sec {
+	font-size: 20px;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+.center {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: calc(100svh - 15rem);
+	transform: translateY(100%);
+}
+.left {
+	max-width: 30%;
+	font-size: 50px;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: -15px;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.795);
+	transition: .4s ease-in-out;
+	cursor: pointer;
+}
+.left:hover {
+	transform: translateY(-5%);
+}
+.right img {
+	width: 600px;
+	height: 100%;
+	z-index: -4;
+}
+.slider {
+	background-color: rgb(63, 63, 63);
+	width: 100%;
+	height: 100svh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translateY(100%);
+}
+.slide {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	right: 0%;
+	background-color: white;
+	width: 15%;
+	height: 4svh;
+	transform: translateX(100%);
+	text-transform: uppercase;
+	font-weight: 1000;
+	color: black;
+	font-size: 30px;
+	padding-left: 40px;
+}
+ion-icon {
+	font-size: 40px;
+}
+span {
+	animation: blinker .9s infinite;
+}
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+@media screen and (max-width:1016px) {
+	.header {
+		margin: 4rem 5rem;
+	}
+	.first {
+		font-size: 15px;
+	}
+	.sec {
+		font-size: 15px;
+	}
+	.left {
+		font-size: 20px;
+	}
+	.right img {
+		width: 300px;
+	}
+}
+@media screen and (max-height:315px) {
+	.right img {
+		display: none;
+	}
+	.left {
+		display: none;
+	}
+}
+@media screen and (max-height:1080px) {
+	.slide {
+		height: 5svh;
+	}
+	.left {
+		font-size: 25px;
+	}
+	.right img {
+		width: 400px;
+	}
+}
+@media screen and (max-width:1481px) {
+	.left {
+		font-size: 20px;
+	}
+}
+@media screen and (max-width:558px) {
+	.left {
+		display:none;
+	}
+}
+@media screen and (max-width:379px) {
+	.header {
+		display:none;
+	}
+	.center {
+		display: none;
+	}
+}
+@media screen and (max-height:537px) {
+	.right {
+		display: none;
+	}
+}

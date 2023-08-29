@@ -13,7 +13,7 @@ tl.fromTo(".header", {opacity : 0}, {opacity: 1, duration: 1.4});
 
 button.addEventListener('mouseenter', () => {
 	tl.to(".sec", {x : "-30%", duration: .3});
-	tl.to(".slide", {x : "15%", duration: .3}, "-=.3");
+	tl.to(".slide", {x : "30%", duration: .3}, "-=.3");
 });
 button.addEventListener('mouseleave', () => {
 	tl.to(".slide", {x : "100%", duration: .3});

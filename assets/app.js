@@ -3,9 +3,8 @@ var index = 0;
 var textPosition = 0;
 var flag = true;
 var destination = document.getElementById('dest');
-
-const tl = gsap.timeline({default : {ease : 'power2.out'}});
 var button = document.getElementById("make_it_move");
+const tl = gsap.timeline({default : {ease : 'power2.out'}});
 
 tl.to(".slider", {y : "-100%", duration : 1});
 tl.to(".center", {y : "0%", duration : 1.5}, "-=1");
@@ -55,3 +54,9 @@ function write() {
 		flag = true;
 	}
 }
+
+button.addEventListener('click', () => {
+	tl.fromTo(".header", {opacity : 1}, {opacity: 0, duration: .4});
+	tl.to(".slider-sec-page", {y : "-100%", duration : 1})
+	tl.to(".center", {y : "-150%", duration : 1}, "-=1");
+});

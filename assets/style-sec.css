@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: black;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100svh;
+}
+ion-icon {
+	color: white;
+	font-size: 400px;
+	cursor: pointer;
+	transition: .9s;
+}

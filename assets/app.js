@@ -5,6 +5,7 @@ var flag = true;
 var destination = document.getElementById('dest');
 var button = document.getElementById("make_it_move");
 const tl = gsap.timeline({default : {ease : 'power2.out'}});
+let url = location.href;
 
 tl.to(".slider", {y : "-100%", duration : 1});
 tl.to(".center", {y : "0%", duration : 1.5}, "-=1");
@@ -59,4 +60,7 @@ button.addEventListener('click', () => {
 	tl.fromTo(".header", {opacity : 1}, {opacity: 0, duration: .4});
 	tl.to(".slider-sec-page", {y : "-100%", duration : 1})
 	tl.to(".center", {y : "-150%", duration : 1}, "-=1");
+	setTimeout(function() {
+		location.href = "../index-loading.html";
+	}, 2000);
 });

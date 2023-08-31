@@ -11,13 +11,9 @@ tl.to(".slider", {y : "-100%", duration : 1});
 tl.to(".center", {y : "0%", duration : 1.5}, "-=1");
 tl.fromTo(".header", {opacity : 0}, {opacity: 1, duration: 1.4});
 
-button.addEventListener('mouseenter', () => {
+button.addEventListener('click', () => {
 	tl.to(".sec", {x : "-30%", duration: .3});
 	tl.to(".slide", {x : "30%", duration: .3}, "-=.3");
-});
-button.addEventListener('mouseleave', () => {
-	tl.to(".slide", {x : "100%", duration: .3});
-	tl.to(".sec", {x : "0%", duration: .3}, "-=.3");
 });
 
 window.addEventListener('load', write());

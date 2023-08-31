@@ -12,9 +12,18 @@ body {
 	align-items: center;
 	height: 100svh;
 }
-ion-icon {
+img {
 	color: white;
-	font-size: 400px;
+	width: 50px;
 	cursor: pointer;
+	animation: turn 1s linear infinite;
 	transition: .9s;
+}
+@keyframes turn {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

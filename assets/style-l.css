@@ -4,24 +4,23 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	overflow: hidden;
 	font-family: Arial, Helvetica, sans-serif;
 }
 .center {
+	text-align: center;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	height: 100svh;
+	opacity: 0;
 }
-.right img {
-	width: 700px;
-	border: 10px solid black;
-	border-radius: 50%;
+.right svg {
+	width: 600px;
 }
 .left {
-	text-align: center;
 	flex-direction: column;
 	display: flex;
 	width: 40%;
@@ -30,11 +29,13 @@ body {
 }
 .left h2 {
 	text-transform: capitalize;
-	padding-bottom: 10px;
-	font-size: 70px;
+	padding-bottom: 30px;
+	font-size: 50px;
 	font-weight: bolder;
 }
-.left h3 {
-	font-size: 40px;
+.left p {
+	font-size: 20px;
 	max-width: 50%;
+	letter-spacing: 2px;
+	line-height: -10px;
 }

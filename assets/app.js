@@ -9,7 +9,7 @@ let url = location.href;
 
 tl.to(".slider", {y : "-100%", duration : 1});
 tl.to(".center", {y : "0%", duration : 1.5}, "-=1");
-tl.fromTo(".header", {opacity : 0}, {opacity: 1, duration: 1.4});
+tl.fromTo(".header", {opacity : 0}, {opacity: 1, duration: .4});
 
 button.addEventListener('click', () => {
 	tl.to(".sec", {x : "-30%", duration: .3});

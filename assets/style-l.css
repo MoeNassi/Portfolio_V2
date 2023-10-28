@@ -17,7 +17,7 @@ body {
 	height: 100svh;
 	opacity: 0;
 }
-.right svg {
+.right {
 	width: 600px;
 }
 .left {
@@ -26,16 +26,63 @@ body {
 	width: 40%;
 	justify-content: center;
 	align-items: center;
+	backdrop-filter: blur(2px);
+	padding: 40px 40px;
 }
 .left h2 {
 	text-transform: capitalize;
 	padding-bottom: 30px;
 	font-size: 50px;
 	font-weight: bolder;
+	color: black;
 }
 .left p {
 	font-size: 20px;
+	background-color: transparent;
 	max-width: 50%;
 	letter-spacing: 2px;
 	line-height: -10px;
+}
+.stars {
+	z-index: -2;
+	width: 10px;
+	height: 10px;
+	border-radius: 50px;
+	background: rgb(93, 21, 226);
+	animation: shine 1s infinite linear;
+	transition: 1s;
+}
+.stars::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: linear-gradient(rgb(27, 10, 58), transparent);
+	border-radius: 50%;
+	rotate: 0deg;
+	animation: trodi_hh 4s infinite linear;
+}
+@keyframes shine {
+	0% {
+		box-shadow: 0px 0px 0px rgb(255, 255, 255);
+	}
+	50% {
+		box-shadow: 20px 20px 12px rgb(0, 0, 0);
+	}
+	100% {
+		box-shadow: 0px 0px 0px rgb(255, 255, 255);
+	}
+}
+@keyframes trodi_hh {
+	0% {
+		rotate: 0deg;
+	}
+	50% {
+		rotate: 360deg;
+	}
+	100% {
+		rotate: 0deg;
+	}
 }

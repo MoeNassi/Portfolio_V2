@@ -27,7 +27,7 @@ function Data() {
 		if (response.ok)
 		return (response.json());
 	else
-	console.log(response.status);
+		console.log(response.status);
 })
 .then(data => {
 	stocker[index] = data.content;

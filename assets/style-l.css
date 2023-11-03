@@ -17,26 +17,25 @@ body {
 	height: 100svh;
 	opacity: 0;
 }
-.right {
-	width: 600px;
-}
 .left {
 	flex-direction: column;
 	display: flex;
-	width: 40%;
+	width: 550px;
 	justify-content: center;
 	align-items: center;
+	background: rgba(214, 115, 58, 0.459);
 	backdrop-filter: blur(2px);
-	padding: 40px 40px;
+	padding: 40px 10px;
 }
 .left h2 {
 	text-transform: capitalize;
 	padding-bottom: 30px;
 	font-size: 50px;
 	font-weight: bolder;
-	color: black;
+	color: white;
 }
 .left p {
+	color: white;
 	font-size: 20px;
 	background-color: transparent;
 	max-width: 50%;
@@ -48,41 +47,40 @@ body {
 	width: 10px;
 	height: 10px;
 	border-radius: 50px;
-	background: rgb(93, 21, 226);
+	background: rgb(131, 73, 238);
 	animation: shine 1s infinite linear;
-	transition: 1s;
+	transition: .5s;
 }
 .stars::before {
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 0px;
 	width: 10px;
 	height: 10px;
-	background: linear-gradient(rgb(27, 10, 58), transparent);
+	background: linear-gradient(rgb(0, 0, 0), transparent);
 	border-radius: 50%;
 	rotate: 0deg;
 	animation: trodi_hh 4s infinite linear;
 }
 @keyframes shine {
 	0% {
-		box-shadow: 0px 0px 0px rgb(255, 255, 255);
+		width: 10px;
+		height: 10px;
+		box-shadow: 1px 1px 0px rgb(255, 255, 255);
 	}
 	50% {
 		box-shadow: 20px 20px 12px rgb(0, 0, 0);
 	}
 	100% {
-		box-shadow: 0px 0px 0px rgb(255, 255, 255);
+		box-shadow: 1px 1px 0px rgb(255, 255, 255);
 	}
 }
 @keyframes trodi_hh {
 	0% {
 		rotate: 0deg;
 	}
-	50% {
-		rotate: 360deg;
-	}
 	100% {
-		rotate: 0deg;
+		rotate: 360deg;
 	}
 }

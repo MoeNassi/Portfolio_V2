@@ -9,6 +9,7 @@ function styleElements() {
 		var randomize = Math.floor(Math.random() * 100);
 		var randomize_1 = Math.floor(Math.random() * 100);
 		var randomize_2 = Math.floor(Math.random() * 12);
+		var oneOf_ = Math.floor(Math.random() * ran);
 		child.style.position = "absolute";
 		child.style.top = randomize + "%"
 		child.style.right = randomize_1 + "%"
